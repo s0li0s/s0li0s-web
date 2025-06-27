@@ -1,0 +1,117 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    overflow: hidden;
+}
+
+.world {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400vw; /* 4 panels */
+    height: 100vh;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(20, 20, 30, 0.92);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
+    padding: 2.2em 2.8em 2em 2.8em;
+    min-width: 320px;
+    max-width: 90vw;
+    z-index: 20;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    transition: box-shadow 0.2s;
+}
+.card h2 {
+    margin: 0 0 0.5em 0;
+    font-size: 2em;
+    letter-spacing: 0.04em;
+}
+.card .bio {
+    font-size: 1.1em;
+    margin: 0 0 1.2em 0;
+    color: #cfcfd9;
+}
+.y1.z1 .y3 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+}
+.card .links a {
+    color: #7fd7ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.08em;
+    transition: color 0.2s;
+}
+.card .links a:hover {
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    .card {
+        min-width: 0;
+        width: 92vw;
+        max-width: 98vw;
+        padding: 1.2em 1em 1.2em 1em;
+        font-size: 1em;
+        top: 54%;
+    }
+}
+
+@media (max-width: 700px) {
+    .y1 {
+        display: none;
+    }
+    .y1.z1 {
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw;
+        height: 100vh;
+        min-width: 0;
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 1em;
+        z-index: 40;
+        background: rgba(20,20,30,0.98);
+        font-size: 1.1em;
+        overflow-y: auto;
+    }
+    .y1.z1 .y4 {
+        display: block;
+    }
+}
